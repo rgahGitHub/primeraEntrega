@@ -1,0 +1,30 @@
+[
+  {
+    "testimonioID": "1",
+    "nombre": "Carla Sepulveda.",
+    "descripcion": "Desde que comenzamos a trabajar con la consultoría de SIMPLE SOLUTION CONSULTING GROUP, la transformación en nuestra empresa de servicios de limpieza ha sido notable. Gracias a su análisis exhaustivo y a las estrategias personalizadas que nos ofrecieron, hemos logrado optimizar nuestros procesos operativos, lo que se ha traducido en una reducción del 20% en costos y una mejora significativa en la satisfacción de nuestros clientes. Su equipo de expertos nos guió en la implementación de tecnologías que han agilizado nuestro servicio, y su apoyo constante nos ha brindado confianza para afrontar nuevos desafíos. Sin duda, ha sido una inversión valiosa que ha elevado nuestro estándar de calidad.",
+    "imagen": "consultor1.jfif",
+    "alt": "cons1"
+  },
+  {
+    "testimonioID": "2",
+    "nombre": "Josheph Smith.",
+    "descripcion": "Contratar los servicios de consultoría de SIMPLE SOLUTION CONSULTING GROUP ha sido un parteaguas para nuestra empresa de contabilidad. Desde el primer día, su equipo se dedicó a comprender nuestras necesidades específicas y nos proporcionó estrategias efectivas para mejorar la gestión de nuestros recursos. Gracias a sus recomendaciones, hemos optimizado nuestros procesos internos, lo que ha resultado en una reducción del 30% en los tiempos de entrega de informes y una mayor precisión en nuestras declaraciones fiscales. La capacitación que nos brindaron ha empoderado a nuestro personal, y ahora nos sentimos más seguros y preparados para enfrentar nuevos retos en el ámbito contable. Sin duda, su apoyo ha sido clave para nuestro crecimiento y éxito continuo.",
+    "imagen": "/consultor2.jfif",
+    "alt": "cons2"
+  },
+  {
+    "testimonioID": "3",
+    "nombre": "Daniela Rivera.",
+    "descripcion": "Colaborar con SIMPLE SOLUTION CONSULTING ha sido una decisión crucial para nuestra empresa de reparación de equipos médicos. Desde el principio, su equipo se interesó por entender las particularidades de nuestro negocio y nos ofreció soluciones personalizadas que han transformado nuestras operaciones. Implementaron un sistema de gestión que ha mejorado nuestra eficiencia en un 25%, permitiéndonos responder más rápidamente a las necesidades de nuestros clientes. Además, la capacitación proporcionada a nuestro personal ha elevado significativamente nuestro nivel técnico y de servicio al cliente. Gracias a su experiencia, hemos fortalecido nuestra reputación en el sector y estamos mejor preparados para enfrentar los retos del futuro.",
+    "imagen": "consultor3.jfif",
+    "alt": "cons3"
+  },
+  {
+    "serviceID": "4",
+    "nombre": "Brandon Lopez.",
+    "descripcion": "Colaborar con SIMPLE SOLUTION CONSULTING ha sido una decisión crucial para nuestra empresa de reparación de equipos médicos. Desde el   principio, su equipo se interesó por entender las particularidades de nuestro negocio y nos ofreció soluciones personalizadas que han transformado nuestras operaciones. Implementaron un sistema de gestión que ha mejorado nuestra eficiencia en un 25%, permitiéndonos responder más rápidamente a las necesidades de nuestros clientes. Además, la capacitación proporcionada a nuestro personal ha elevado significativamente nuestro nivel técnico y de servicio al cliente. Gracias a su experiencia, hemos fortalecido nuestra reputación en el sector y estamos mejor preparados para enfrentar los retos del futuro.",
+    "imagen": "consultor4.jfif",
+    "alt": "cons4"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "serviceID": "1",
+    "nombre": "Servicio Basico",
+    "descripcion": "Servicio de consultoria Basico para su empresa, este es nuestra mas basica implementacion de mejoras, lo estara visitando uno de nuestros profesionales al cual Ud. deberá explicarle la necesidad de negocio que quiere aplciar en su compañia, recuerde que nuestra meta es el exito y mejoras de los procesos tecnologicos.",
+    "precio": "$500"
+  },
+  {
+    "serviceID": "2",
+    "nombre": "Servicio Basico+",
+    "descripcion": "Servicio de consultoria para su empresa Basico+ Incluye todo lo del basico ademas incluye reuniones semanales para medir el avance del proyecto asi como las mejoras en las que se ha querido enfocar el servicio.",
+    "precio": "$800"
+  },
+  {
+    "serviceID": "3",
+    "nombre": "Servicio Premium",
+    "descripcion": "Servicio de consultoria para su empresa Premium incluye Basico+ adicional se desarrollará una propuesta de negocio de lo que se quiere mejorar, incluye reuniones interdiarias para medir el avance del proyecto y mejoras logradas, un recurso estara fisicamente en su empresa.",
+    "precio": "$1000"
+  },
+  {
+    "serviceID": "4",
+    "nombre": "Servicio Premium+",
+    "descripcion": "Servicio de consultoria Premium+ donde lo estara visitando 3 de nuestros profesionales, 1 arquitecto de software 1 DBA los cuales desarrollaran una propuesta de negocio de lo que se quiere mejorar, incluye presencialidad diaria de los recursos hasta finalizar el proyecto, la idea es que nuestro equipo se integre con la empresa para mejorar resultados.",
+    "precio": "$1500"
+  }
+]
