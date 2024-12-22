@@ -29,7 +29,7 @@
           <a href="blank"
             ><img src="resources/img/carrito2.jfif" width="50px" alt="carrito"
           /></a>
-          <button type="button" onclick="gotoModal()">Ir al carrito</button>
+          <button type="button" onclick="gotoModal()">Carrito</button>
         </div>
       </nav>
       <div>
@@ -90,8 +90,7 @@
       </div>
     </main>
     <footer class="animacion">
-      <!-- <a href="#inicio" class="pie">Ir al carrito de compras</a> -->
-      <button type="button" onclick="gotoModal()">Ir al carrito</button>
+      <a href="#inicio" class="pie" onclick="gotoModal()">Ir al carrito</a>
       <!-- <a href="#inicio" class="top">inicio</a> -->
       <ul class="redessociales">
         <li>
@@ -110,9 +109,8 @@
     </script>
   </body>
 </html>
-<!-- 
+
 <dialog>
-  <button autofocus onclick="closeModal()">Close</button>
   <section class="contenidoCarrito">
     <h2>Carrito</h2>
     <table>
@@ -121,16 +119,22 @@
           <th>Nombre</th>
           <th>Cantidad</th>
           <th>precio</th>
+          <th></th>
         </tr>
       </thead>
       <tbody class="items">
         <tr data-id="">
-          <td>Nombre</td>
-          <td>Cantidad</td>
-          <td>precio</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
     </table>
+    <h3 id="total">Total</h3>
   </section>
+  <button onclick="vaciar()">Vaciar Carrito</button>
+  <button onclick="pagar()">Pagar</button>
+  <button autofocus onclick="closeModal()">Cerrar</button>
 </dialog>
-<button>Show the dialog</button> -->
+<!-- <button>Show the dialog</button> -->

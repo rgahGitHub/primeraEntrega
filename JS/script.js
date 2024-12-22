@@ -1,25 +1,29 @@
 function gotoModal() {
-  console.log("va a abrir el modal");
   const dialog = document.querySelector("dialog");
   dialog.showModal();
 
   let carritoContent = JSON.parse(localStorage.getItem("carrito"));
-  console.log("muestra el contenido del carrito");
-  console.log(carritoContent);
-  // localStorage.clear();
-  const section = document.querySelector(".contenidoCarrito");
+  const section = document.querySelector(".items");
   section.innerHTML = "";
+  let total = 0;
 
-  carritoContent.forEach((item) => {
-    const html = `
+  if (carritoContent != null) {
+    carritoContent.forEach((item) => {
+      total = total + parseFloat(item.precio.replace("$", ""));
+      const html = `
           <tr data-id="${item.id}">
-            <td>${item.nombre}</td>
+            <td>${item.nombreproducto}</td>
             <td>${item.cantidad}</td>
             <td>${item.precio}</td>
+            <td><button type="button" class="eliminar" onclick="eliminar(${item.id})">Eliminar</button></td>
           </tr>
     `;
-    section.innerHTML += html;
-  });
+      section.innerHTML += html;
+    });
+    const htmltotal = document.querySelector("#total");
+
+    htmltotal.innerHTML = "TOTAL: " + parseFloat(total);
+  }
 }
 
 function closeModal() {
@@ -27,37 +31,25 @@ function closeModal() {
   dialog.close();
 }
 
-async function comprar(serviceID, pnombre) {
+function vaciar() {
+  localStorage.clear();
+  gotoModal();
+}
+
+function eliminar() {}
+function pagar() {}
+
+async function comprar(serviceID) {
   console.log(serviceID);
-  console.log(pnombre);
-  const nombre = "";
-  const precio = "";
-
-  // fetch("./resources/json/data.json")
-  //   .then((response) => response.json())
-  //   .then((posts) => {
-  //     posts.forEach((post) => {
-  //       console.log("prueba");
-  //       console.log(post.nombre);
-  //       console.log(post.precio);
-
-  //       if (post.serviceID === serviceID) {
-  //         console.log("son iguales");
-  //         nombre = post.nombre;
-  //         precio = post.precio;
-  //       }
-  //     });
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   });
+  let nombre = "";
+  let precio = "";
 
   try {
     const response = await fetch("./resources/json/data.json");
     const posts = await response.json();
 
     posts.forEach((post) => {
-      if (post.serviceID === serviceID) {
+      if (post.serviceID === serviceID.toString()) {
         nombre = post.nombre;
         precio = post.precio;
       }
@@ -75,20 +67,16 @@ async function comprar(serviceID, pnombre) {
     cantidad: 1,
   };
 
-  //console.log(producto);
-
   carrito.push(producto);
-  // console.log(carrito);
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  // alert("Se ha agregado un servicio al carrito!");
+  alert("Se ha agregado un servicio al carrito!");
 }
 
 function cargadatos() {
   fetch("./resources/json/data.json")
     .then((response) => response.json())
     .then((posts) => {
-      //const section = document.querySelector("section");
       const section = document.querySelector(".seccionesFlex");
       section.innerHTML = "";
 
@@ -104,7 +92,7 @@ function cargadatos() {
               <div class="buttoncontainer">
                 <div class="btn-holder">
                   <p>${post.precio}</p>
-                  <button type="button" class="agregar" onclick="comprar(${post.serviceID},${post.nombre})">Agregar al carrito</button>
+                  <button type="button" class="agregar" onclick="comprar(${post.serviceID})">Agregar al carrito</button>
                 </div>
               </div>
             </div>
