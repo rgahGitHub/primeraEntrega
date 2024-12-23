@@ -20,10 +20,10 @@ function gotoModal() {
     `;
       section.innerHTML += html;
     });
-    const htmltotal = document.querySelector("#total");
-
-    htmltotal.innerHTML = "TOTAL: " + parseFloat(total);
   }
+  const htmltotal = document.querySelector("#total");
+  htmltotal.innerHTML = "";
+  htmltotal.innerHTML = "TOTAL: " + parseFloat(total);
 }
 
 function closeModal() {
@@ -33,10 +33,21 @@ function closeModal() {
 
 function vaciar() {
   localStorage.clear();
+  const htmltotal = document.querySelector("#total");
+  htmltotal.innerHTML = "";
   gotoModal();
 }
 
-function eliminar() {}
+function eliminar(serviceID) {
+  //localStorage.removeItem("carrito");
+  let carritoContent = JSON.parse(localStorage.getItem("carrito"));
+  if (carritoContent != null) {
+    carritoContent = carritoContent.filter((item) => item.id !== serviceID);
+    localStorage.setItem("carrito", JSON.stringify(carritoContent));
+    gotoModal();
+  }
+}
+
 function pagar() {}
 
 async function comprar(serviceID) {
